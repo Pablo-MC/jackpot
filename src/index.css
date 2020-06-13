@@ -1,13 +1,187 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+   font-size: 62.5%;  /* for REM use --> 1rem = 10px */
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   line-height: 1.6;
+   min-height: 100vh;
+   background-image: linear-gradient(to right bottom, rgba(140,255,218, .8), rgba(255,255,232, .7)), url(./images/background.png);
+   box-shadow: 5px 5px 5px 0px #444, inset 4px 4px 25px 0px #44C17C, 5px 5px 5px 5px rgba(0,0,0,0);
+   -webkit-box-shadow: 5px 5px 5px 0px #444, inset 4px 4px 25px 0px #44C17C, 5px 5px 5px 5px rgba(0,0,0,0);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   border: .3rem solid #44C17C;
+   color: #444;
+}
+
+
+
+/* ------ ALERTAS ------ */
+
+.soft { animation: soft 5s ease-in-out; }
+
+.alerta-error {
+   font-size: 2.3rem;
+   color: #C9695E;
+}
+
+.alerta-verde {
+   font-size: 3.5rem;
+   color: #44C17C;
+}
+
+.alerta-rojo {
+   font-size: 3.5rem;
+   color: #C9695E;
+}
+
+.alerta-amarillo {
+   font-size: 3.5rem;
+   color: #A48B37;
+}
+
+.alerta-suerte {
+   margin-top: 2.5rem;
+   font-size: 3.5rem;
+   color: #44C17C;
+   animation: moveInBottom 5s ease-in-out;
+}
+
+
+/* Animaciones */
+
+@keyframes moveInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(3rem);
+   }
+   65% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(0);
+   }
+}
+
+@keyframes soft {
+   0% {
+      opacity: 0;
+      transform: translateY(0);
+   }
+   25% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(0);
+   }
+}
+
+
+
+/* ------ BOTONES ------ */
+
+.btn {
+   font-family: 'Lato', sans-serif;
+   display: block;
+   cursor: pointer;
+   margin: 2.5rem auto;
+   font-size: 2rem;
+   padding: 1rem 2.5rem;
+   font-weight: 300;
+   border-radius: 20rem;
+   background-color: #e67e22;
+   border: 1px solid #e67e22;
+   outline: none;
+   color: #fff;
+   -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
+   transition: background-color 0.5s, transform .1s, border 0.5s, color 0.5s;
+}
+
+.btn:hover { background-color: #cf6d17; }
+
+.btn:active { transform: translateY(.2rem); }
+
+
+.btn-salir {
+   font-size: 1.5rem;
+   padding: .5rem 1.5rem;
+   background-color: #C9695E;
+   border: 1px solid #C9695E;
+}
+
+.btn-salir:hover { background-color: #C9695E; }
+
+.btn-reinciar {
+   background-color: #44C17C;
+   border: 1px solid #44C17C;
+}
+
+.btn-reinciar:hover { background-color: #44C17C; }
+
+
+
+/* Encabezado */
+
+.encabezado {
+   font-size: 5rem;
+   text-align: center;
+}
+
+
+
+/* Formulario */
+
+.formulario {
+   width: 35rem;
+   margin: 0 auto;
+   text-align: center;
+}
+
+select { text-align-last: center; }
+
+input[type=text], select {
+   width: 100%;
+   margin: 1rem 0;
+   font-family: 'Lato', sans-serif;
+   font-size: 2rem;
+   padding: .7rem;
+   border-radius: .5rem;
+   border: 1px solid #8CFFDA;
+   font-weight: 300;
+   text-align: center;
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* Juego */
+
+.juego {
+   margin: 2rem;
+   text-align: center;
+}
+
+.img {
+   width: 10rem;
+   margin: 2rem;
+}
+
+.intentos {
+   font-size: 2rem;
+   font-weight: 400;
 }
