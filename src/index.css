@@ -3,12 +3,11 @@
 *::after {
    margin: 0;
    padding: 0;
-   box-sizing: inherit;
+   box-sizing: border-box;
 }
 
 html {
    font-size: 62.5%;  /* for REM use --> 1rem = 10px */
-   box-sizing: border-box;
 }
 
 body {
@@ -24,8 +23,11 @@ body {
    background-position: center;
    border: .3rem solid #44C17C;
    color: #444;
-}
 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 
 /* ------ ALERTAS ------ */
