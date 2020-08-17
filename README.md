@@ -4,4 +4,4 @@
 
 ####
 
-<img src="/src/images/jackpot.jpg" width="500">
+<img src="/src/images/jackpot.jpg" width="400" height="300">
